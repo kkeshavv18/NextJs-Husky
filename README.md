@@ -1,65 +1,75 @@
-# 🚀 Next.js Project Template with ESLint, Prettier, Husky, and Lint-Staged  
+🚀 Next.js + TypeScript Project Template with ESLint, Prettier, Husky, and Lint-Staged
+This repository provides a pre-configured Next.js project template with TypeScript, ESLint, Prettier, Husky, and Lint-Staged to ensure a clean, consistent, and production-ready codebase. It’s designed to streamline your development workflow and enforce coding standards across your team.
+✨ Features
 
-This repository provides a **Next.js project template** pre-configured with:  
-- 🔍 **ESLint** – catch errors early and enforce best practices  
-- 🎨 **Prettier** – maintain consistent code formatting  
-- 🐶 **Husky** – manage Git hooks for automated checks  
-- ⚡ **Lint-Staged** – run linters only on staged files for faster commits  
+Next.js + TypeScript: A robust setup for building scalable web applications.
+ESLint: Catches errors early and enforces best practices with Next.js-specific rules (next/core-web-vitals, next/typescript).
+Prettier: Ensures consistent code formatting across the team.
+Husky: Automates Git hooks to run checks before commits and pushes.
+Lint-Staged: Runs linters and formatters only on staged files for faster commits.
+Custom Rules:
+Enforces kebab-case file naming conventions.
+Disallows console.log and debugger statements in production code.
+Prevents using array indices as keys in React components.
 
-It’s designed to help you and your team maintain **clean, consistent, and production-ready code**.  
 
----
 
-## ✨ Features  
+📦 Getting Started
+Prerequisites
 
-- Pre-configured **Next.js + TypeScript** setup  
-- Enforces **file naming conventions**  
-- Disallows `console.log` and `debugger` in commits  
-- Prevents using **array index as a key** in React  
-- Runs ESLint & Prettier automatically before every commit  
-- Ensures a **smooth developer workflow** out of the box  
+Node.js (>= 18.x)
+npm, yarn, or pnpm
+Git
 
----
+Installation
 
-## 📦 Getting Started  
+Clone the repository:
+git clone https://github.com/kkeshavv18/NextJs-Husky.git
+cd NextJs-Husky
 
-Clone the repository and install dependencies:  
 
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-npm install   # or yarn install / pnpm install
+Install dependencies:
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+
 Start the development server:
-
-bash
-Copy code
 npm run dev
-⚙️ Available Scripts
-npm run dev – Starts the Next.js development server
 
-npm run build – Builds the app for production
 
-npm run start – Runs the production build
-
-npm run lint – Runs ESLint checks
-
-npm run format – Formats code with Prettier
 
 🛠️ Tools & Configurations
 ESLint
-Extends next/core-web-vitals and next/typescript
 
-Custom rules to enforce naming conventions, disallow console/debugger, and prevent index keys
+Extends next/core-web-vitals and next/typescript for Next.js-specific best practices.
+Custom rules:
+Enforces kebab-case file naming (eslint-plugin-check-file).
+Disallows console.log and debugger statements.
+Prevents using array indices as keys in React components.
+
+
 
 Prettier
-Opinionated code formatting integrated with ESLint
+
+Configured with consistent formatting rules (single quotes, trailing commas, 80-character line width, etc.).
+Integrated with ESLint to avoid conflicts (eslint-config-prettier).
 
 Husky
-Runs Git hooks before commit and push
+
+Pre-commit hook: Runs lint-staged to format and lint staged files.
+Pre-push hook: Ensures the project builds successfully before pushing to the remote repository.
 
 Lint-Staged
-Runs ESLint and Prettier only on staged files for faster commits
 
-📖 Reference
-This setup is explained in detail in my blog post:
-👉 Setting up a Robust Next.js Workflow
+Runs Prettier and ESLint only on staged files for efficient commits.
+Optionally runs tests (if configured) before commits.
+
+📖 Learn More
+This setup is explained in detail in the following blog post:👉 https://medium.com/@keshavkattel1998/setting-up-a-robust-next-js-e79b89e7d44e
+🛠️ Customization
+You can customize the ESLint rules, Prettier settings, or Husky hooks to match your project’s requirements. Refer to the blog post for detailed instructions on modifying configurations.
+
+If you find this template useful, please ⭐ the repository and share it with your team! For any questions or suggestions, feel free to open an issue or reach out via the blog post comments.
