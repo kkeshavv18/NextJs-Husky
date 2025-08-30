@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js Project Template with ESLint, Prettier, Husky, and Lint-Staged  
 
-## Getting Started
+This repository provides a **Next.js project template** pre-configured with:  
+- 🔍 **ESLint** – catch errors early and enforce best practices  
+- 🎨 **Prettier** – maintain consistent code formatting  
+- 🐶 **Husky** – manage Git hooks for automated checks  
+- ⚡ **Lint-Staged** – run linters only on staged files for faster commits  
 
-First, run the development server:
+It’s designed to help you and your team maintain **clean, consistent, and production-ready code**.  
+
+---
+
+## ✨ Features  
+
+- Pre-configured **Next.js + TypeScript** setup  
+- Enforces **file naming conventions**  
+- Disallows `console.log` and `debugger` in commits  
+- Prevents using **array index as a key** in React  
+- Runs ESLint & Prettier automatically before every commit  
+- Ensures a **smooth developer workflow** out of the box  
+
+---
+
+## 📦 Getting Started  
+
+Clone the repository and install dependencies:  
 
 ```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+npm install   # or yarn install / pnpm install
+Start the development server:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+⚙️ Available Scripts
+npm run dev – Starts the Next.js development server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+npm run build – Builds the app for production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run start – Runs the production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm run lint – Runs ESLint checks
 
-## Learn More
+npm run format – Formats code with Prettier
 
-To learn more about Next.js, take a look at the following resources:
+🛠️ Tools & Configurations
+ESLint
+Extends next/core-web-vitals and next/typescript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Custom rules to enforce naming conventions, disallow console/debugger, and prevent index keys
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Prettier
+Opinionated code formatting integrated with ESLint
 
-## Deploy on Vercel
+Husky
+Runs Git hooks before commit and push
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Lint-Staged
+Runs ESLint and Prettier only on staged files for faster commits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📖 Reference
+This setup is explained in detail in my blog post:
+👉 Setting up a Robust Next.js Workflow
